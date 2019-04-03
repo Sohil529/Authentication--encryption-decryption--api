@@ -9,15 +9,7 @@ const randomroutes = require('./router/get_controller_details');
 const updateduser = require('./router/update_controller_details');
 // const randomroutes = require('./router/user_routes.js');
 const PORT = process.env.PORT || 6100;
-const knex = require("knex")({
-  client: "pg",
-  connection: {
-    host: "127.0.0.1",
-    user: "postgres",
-    password: "sk@96877",
-    database: "controllers"
-  }
-});
+const knex = require('./knex');
 
 /*parse the json*/
 app.use(bodyparser.json());
@@ -35,4 +27,3 @@ app.use(updateduser);
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);
 });
-

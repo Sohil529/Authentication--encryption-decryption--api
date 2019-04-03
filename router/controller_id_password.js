@@ -24,7 +24,7 @@ router.get('/', (req, res, next) => {
 //     console.log(JSON.stringify(req.body));
 //     const result = await knex("public.controller").insert({
 //         username: req.body.username,
-//         passwords: hash,
+//         password: hash,
 
 //         mac: req.body.mac,
 //         submited_date: new Date()

@@ -14,7 +14,7 @@ router.put('/api/v1/idpassword', async function (req, res) {
     // console.log(encrepted_password);
     const result = await knex("public.controller").where('mac', req.query.mac).update({
         username: updated_username,
-        passwords: updated_password,
+        password: updated_password,
         mac: req.body.mac,
         submited_date: new Date()
     });
